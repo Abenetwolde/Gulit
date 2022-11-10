@@ -1,7 +1,7 @@
 const app = require('./app');
 const connectDatabase = require('./config/database');
 const cloudinary = require('cloudinary');
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT||4000 ;
 
 // UncaughtException Error
 process.on('uncaughtException', (err) => {
@@ -12,9 +12,10 @@ process.on('uncaughtException', (err) => {
 connectDatabase();
 
 cloudinary.config({
-    cloud_name: process.env.CLOUDINARY_NAME,
-    api_key: process.env.CLOUDINARY_API_KEY,
-    api_secret: process.env.CLOUDINARY_API_SECRET,
+
+    cloud_name: "abmanwolde",
+    api_key: "827239376525146",
+    api_secret: "qcT03npP3xh4VrLYBBMHuXr2IbQ",
 });
 
 const server = app.listen(PORT, () => {
